@@ -1,9 +1,9 @@
-import DataStructures.Algorithms.ArraysBinarySearch;
+import DataStructures.Algorithms.Searching.ArraysBinarySearch;
+import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
 import DataStructures.Arrays;
 
 public class Runner {
-    public static void ArrayRunner()
-    {
+    public void ArrayRunner () {
         // Creating an array of objects of type Arrays
         Arrays[] ArrayObject = new Arrays[5];
 
@@ -30,20 +30,34 @@ public class Runner {
         ArrayObject[0].PrintArray();
     }
 
-    public void PrintTypeOfData()
-    {
+    public void PrintTypeOfData () {
         long number = 10000000000000L;
 
-        System.out.println( ((Object) number).getClass().getSimpleName());
+        System.out.println(((Object) number).getClass().getSimpleName());
     }
 
-    public void BinarySearch()
-    {
+    public void BinarySearch () {
         Arrays Array = new Arrays();
         Array.Initialize(50);
         Array.InsertElements();
 
         ArraysBinarySearch BinarySearch = new ArraysBinarySearch(Array);
         BinarySearch.PrintOutput(Array, 49);
+    }
+
+    public void Random () {
+        Arrays Array = new Arrays();
+        Array.Initialize(50);
+        Array.RandomArrayGenerator();
+    }
+
+    public void SelectionSort () {
+        Arrays Array = new Arrays();
+        Array.Initialize(25);
+        Array.RandomArrayGenerator();
+
+        ArraysSelectionSort SelectionSort = new ArraysSelectionSort(Array);
+        SelectionSort.PrintOutput(Array);
+
     }
 }
