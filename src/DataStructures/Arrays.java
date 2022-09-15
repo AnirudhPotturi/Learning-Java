@@ -75,17 +75,24 @@ public class Arrays {
     }
 
     public void RandomArrayGenerator () {
-        Random RandomNumber = new Random(2);
+        Random RandomNumber = new Random();
         for (Idx = 0; Idx < ArrayLength; Idx++) {
             GenerateArray[Idx] = RandomNumber.nextInt(1000);
         }
     }
 
-    public int GetElement (Arrays Array, int Loc) {
-        return Array.GenerateArray[Loc];
+    public int GetElement (int Loc) {
+        return this.GenerateArray[Loc];
     }
 
-    public void SetElement (Arrays Array, int Element, int Loc) {
-        Array.GenerateArray[Loc] = Element;
+    public void SetElement (int Element, int Loc) {
+        this.GenerateArray[Loc] = Element;
+    }
+
+    public void Swap2Elements(int Idx1, int Idx2) {
+        int Swapper;
+        Swapper = GetElement(Idx1);
+        SetElement(GetElement(Idx2), Idx1);
+        SetElement(Swapper, Idx2);
     }
 }

@@ -5,5 +5,6 @@ public class Main {
         runner.BinarySearch();
         runner.Random();
         runner.SelectionSort();
+        runner.BubbleSort();
     }
 }

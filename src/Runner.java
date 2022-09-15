@@ -1,4 +1,5 @@
 import DataStructures.Algorithms.Searching.ArraysBinarySearch;
+import DataStructures.Algorithms.Sorting.ArraysBubbleSort;
 import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
 import DataStructures.Arrays;
 
@@ -55,9 +56,25 @@ public class Runner {
         Arrays Array = new Arrays();
         Array.Initialize(25);
         Array.RandomArrayGenerator();
+        System.out.println("My array Before Sorting - ");
+        Array.PrintArray();
 
         ArraysSelectionSort SelectionSort = new ArraysSelectionSort(Array);
-        SelectionSort.PrintOutput(Array);
+        SelectionSort.PerformSelectionSort(Array);
+        System.out.println("My array after sorting - ");
+        Array.PrintArray();
+    }
 
+    public void BubbleSort () {
+        Arrays Array = new Arrays();
+        Array.Initialize(25);
+        Array.RandomArrayGenerator();
+        System.out.println("My array Before Sorting - ");
+        Array.PrintArray();
+
+        ArraysBubbleSort BubbleSort = new ArraysBubbleSort(Array);
+        BubbleSort.RecursiveCaller(Array);
+        System.out.println("My array after sorting - ");
+        Array.PrintArray();
     }
 }
