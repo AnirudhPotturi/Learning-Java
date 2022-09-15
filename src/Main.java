@@ -6,6 +6,4 @@ public class Main {
         runner.Random();
         runner.SelectionSort();
     }
-
-
 }

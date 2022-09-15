@@ -13,16 +13,17 @@ public class ArraysSelectionSort {
     }
 
     public void PerformSelectionSort (Arrays Array) {
-        int i, j, Small, Temp;
-        for (i = StartIdx; i < this.ArrayLength; i++) {
-            Small = i;
-            for (j = i + 1; j < this.ArrayLength; j++) {
-                if (Array.GenerateArray[Small] > Array.GenerateArray[j]) {
-                    Temp = Array.GenerateArray[Small];
-                    Array.GenerateArray[Small] = Array.GenerateArray[j];
-                    Array.GenerateArray[j] = Temp;
+        int PivotIdx, Idx, Small, Swapper;
+        for (PivotIdx = StartIdx; PivotIdx < this.ArrayLength; PivotIdx++) {
+            Small = PivotIdx;
+            for (Idx = PivotIdx + 1; Idx < this.ArrayLength; Idx++) {
+                if (Array.GetElement(Array, Idx) < Array.GetElement(Array, Small)) {
+                    Small = Idx;
                 }
             }
+            Swapper = Array.GetElement(Array, PivotIdx);
+            Array.SetElement(Array, Array.GetElement(Array, Small), PivotIdx);
+            Array.SetElement(Array, Swapper, Small);
         }
     }
 
@@ -30,7 +31,7 @@ public class ArraysSelectionSort {
         PerformSelectionSort(Array);
         int Idx;
         for(Idx = StartIdx; Idx < ArrayLength; Idx++) {
-            System.out.print(Array.GenerateArray[Idx] + " ");
+            System.out.print(Array.GetElement(Array, Idx) + " ");
         }
         System.out.println();
     }

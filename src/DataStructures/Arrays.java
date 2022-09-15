@@ -81,4 +81,11 @@ public class Arrays {
         }
     }
 
+    public int GetElement (Arrays Array, int Loc) {
+        return Array.GenerateArray[Loc];
+    }
+
+    public void SetElement (Arrays Array, int Element, int Loc) {
+        Array.GenerateArray[Loc] = Element;
+    }
 }
