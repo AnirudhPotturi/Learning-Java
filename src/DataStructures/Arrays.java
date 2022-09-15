@@ -1,5 +1,7 @@
 package DataStructures;
 
+import java.util.Random;
+
 public class Arrays {
     int Idx;
     int ArrayLength;
@@ -50,7 +52,7 @@ public class Arrays {
     {
         for(Idx = 0; Idx < ArrayLength; Idx++)
         {
-            this.GenerateArray[Idx] = Idx;
+            GenerateArray[Idx] = Idx;
         }
     }
 
@@ -93,6 +95,28 @@ public class Arrays {
     public int ArrayGetLength()
     {
         return (this.GenerateArray.length);
+    }
+
+    public void RandomArrayGenerator()
+    {
+        Random RandomNumber = new Random(2);
+
+        for(Idx = 0; Idx < ArrayLength; Idx++)
+        {
+            //Replace with the following line for larger numbers---
+            // GenerateArray[Idx] = RandomNumber.nextInt(Integer.MAX_VALUE);
+            GenerateArray[Idx] = RandomNumber.nextInt(1000);
+        }
+    }
+
+    public int GetElement(Arrays Array, int Loc)
+    {
+        return Array.GenerateArray[Loc];
+    }
+
+    public void SetElement(Arrays Array, int Element, int Loc)
+    {
+        Array.GenerateArray[Loc] = Element;
     }
 
 }

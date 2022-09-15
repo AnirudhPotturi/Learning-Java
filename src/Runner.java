@@ -1,4 +1,5 @@
-import DataStructures.Algorithms.ArraysBinarySearch;
+import DataStructures.Algorithms.Searching.ArraysBinarySearch;
+import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
 import DataStructures.Arrays;
 
 public class Runner {
@@ -45,5 +46,22 @@ public class Runner {
 
         ArraysBinarySearch BinarySearch = new ArraysBinarySearch(Array);
         BinarySearch.PrintOutput(Array, 49);
+    }
+
+    public void Random()
+    {
+        Arrays Array = new Arrays();
+        Array.Initialize(5);
+        Array.RandomArrayGenerator();
+
+        System.out.println("My Array before sorting   ");
+        Array.PrintArray();
+
+        ArraysSelectionSort SelectionSort = new ArraysSelectionSort(Array);
+        SelectionSort.PerformSelectionSort(Array);
+
+        System.out.println("My Array after sorting   ");
+        Array.PrintArray();
+
     }
 }

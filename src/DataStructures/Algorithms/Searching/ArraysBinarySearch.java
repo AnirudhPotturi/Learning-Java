@@ -1,4 +1,4 @@
-package DataStructures.Algorithms;
+package DataStructures.Algorithms.Searching;
 
 import DataStructures.Arrays;
 
