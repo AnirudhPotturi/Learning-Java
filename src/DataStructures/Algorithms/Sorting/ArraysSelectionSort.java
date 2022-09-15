@@ -21,7 +21,6 @@ public class ArraysSelectionSort {
 
     public void PerformSelectionSort(Arrays Array)
     {
-        int Swapper;
         for(StartIdx = 0; StartIdx < (ArrayLength - 1); StartIdx++)
         {
             MinIdx = StartIdx;
@@ -32,9 +31,8 @@ public class ArraysSelectionSort {
                     MinIdx = Idx;
                 }
             }
-            Swapper = (Array.GetElement(Array, StartIdx));
-            Array.SetElement(Array, (Array.GetElement(Array, MinIdx)), StartIdx);
-            Array.SetElement(Array, Swapper, MinIdx );
+            Array.Swapper(Array, StartIdx, MinIdx);
         }
     }
+
 }

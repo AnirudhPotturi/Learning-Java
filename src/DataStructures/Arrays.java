@@ -99,7 +99,7 @@ public class Arrays {
 
     public void RandomArrayGenerator()
     {
-        Random RandomNumber = new Random(2);
+        Random RandomNumber = new Random();
 
         for(Idx = 0; Idx < ArrayLength; Idx++)
         {
@@ -117,6 +117,15 @@ public class Arrays {
     public void SetElement(Arrays Array, int Element, int Loc)
     {
         Array.GenerateArray[Loc] = Element;
+    }
+
+    public void Swapper(Arrays Array, int ElementOneIdx, int ElementTwoIdx)
+    {
+        int Swapper;
+
+        Swapper = (Array.GetElement(Array, ElementOneIdx));
+        Array.SetElement(Array, (Array.GetElement(Array, ElementTwoIdx)), ElementOneIdx);
+        Array.SetElement(Array, Swapper, ElementTwoIdx );
     }
 
 }
