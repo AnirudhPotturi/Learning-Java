@@ -84,15 +84,20 @@ public class Runner {
 
     }
 
-    public void Stacks() throws ArithmeticException
+    public void Stacks()
     {
         Stack stack = new Stack(10);
         stack.CreateStack();
         stack.InitializeTop();
-        stack.Push(5);
-        stack.Push(25);
+        for(int i =0; i < 11; i++)
+        {
+            stack.Push(i+1);
+        }
         stack.PrintStack();
-        stack.Pop();
+        for(int i =0; i < 1; i++)
+        {
+            stack.Pop();
+        }
         stack.PrintStack();
     }
 }

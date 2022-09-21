@@ -27,13 +27,25 @@ public class Stack {
     public void Push(int Element)
     {
         Top = Top + 1;
-        Stack[Top] = Element;
+        if(Top >= StackSize)
+        {
+            System.err.println("Error! Reached the top of the stack");
+        }
+        else {
+            Stack[Top] = Element;
+        }
     }
 
     public void Pop()
     {
-        Stack[Top] = 0;
         Top = Top - 1;
+        if(Top < 0)
+        {
+            System.err.println("Error! Reached the bottom of the stack");
+        }
+        else {
+            Stack[Top] = 0;
+        }
     }
 
     public void PrintStack()
