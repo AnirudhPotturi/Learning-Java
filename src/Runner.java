@@ -1,6 +1,7 @@
 import DataStructures.Algorithms.Searching.ArraysBinarySearch;
 import DataStructures.Algorithms.Sorting.ArraysBubbleSort;
 import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
+import DataStructures.Implementations.StacksUsingArrays;
 import DataStructures.Arrays;
 
 public class Runner {
@@ -76,5 +77,19 @@ public class Runner {
         BubbleSort.RecursiveCaller(Array);
         System.out.println("My array after sorting - ");
         Array.PrintArray();
+    }
+
+    public void Stacks () {
+        StacksUsingArrays Stack = new StacksUsingArrays(10);
+        for (int i = 0; i < 10; i++)
+            Stack.Push(i + 1);
+        Stack.Push(11);
+        Stack.PrintStack();
+
+        for (int i = 0; i < 10; i++)
+            Stack.Pop();
+        Stack.Pop();
+        Stack.PrintStack();
+
     }
 }

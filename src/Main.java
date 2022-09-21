@@ -6,5 +6,6 @@ public class Main {
         runner.Random();
         runner.SelectionSort();
         runner.BubbleSort();
+        runner.Stacks();
     }
 }
