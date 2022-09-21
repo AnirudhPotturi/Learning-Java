@@ -2,6 +2,7 @@ import DataStructures.Algorithms.Searching.ArraysBinarySearch;
 import DataStructures.Algorithms.Sorting.ArraysBubbleSort;
 import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
 import DataStructures.Arrays;
+import DataStructures.Stack;
 
 public class Runner {
     public static void ArrayRunner()
@@ -83,4 +84,15 @@ public class Runner {
 
     }
 
+    public void Stacks() throws ArithmeticException
+    {
+        Stack stack = new Stack(10);
+        stack.CreateStack();
+        stack.InitializeTop();
+        stack.Push(5);
+        stack.Push(25);
+        stack.PrintStack();
+        stack.Pop();
+        stack.PrintStack();
+    }
 }
