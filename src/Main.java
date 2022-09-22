@@ -8,5 +8,6 @@ public class Main {
         runner.BubbleSort();
         runner.Stacks();
         runner.Queues();
+        runner.PriorityQueues();
     }
 }

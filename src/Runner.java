@@ -1,6 +1,7 @@
 import DataStructures.Algorithms.Searching.ArraysBinarySearch;
 import DataStructures.Algorithms.Sorting.ArraysBubbleSort;
 import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
+import DataStructures.Implementations.PriorityQueuesUsingArrays;
 import DataStructures.Implementations.StacksUsingArrays;
 import DataStructures.Implementations.QueuesUsingArrays;
 import DataStructures.Arrays;
@@ -105,5 +106,18 @@ public class Runner {
             Queue.Remove();
         Queue.Remove();
         Queue.PrintQueue();
+    }
+
+    public void PriorityQueues () {
+        PriorityQueuesUsingArrays PriorityQueue = new PriorityQueuesUsingArrays(10);
+        for (int i = 0; i < 10; i++)
+            PriorityQueue.Insert(i + 1);
+        PriorityQueue.Insert(11);
+        PriorityQueue.PrintQueue();
+
+        for (int i = 0; i < 10; i++)
+            PriorityQueue.Remove();
+        PriorityQueue.Remove();
+        PriorityQueue.PrintQueue();
     }
 }
