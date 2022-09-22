@@ -7,5 +7,6 @@ public class Main {
         runner.SelectionSort();
         runner.BubbleSort();
         runner.Stacks();
+        runner.Queues();
     }
 }
