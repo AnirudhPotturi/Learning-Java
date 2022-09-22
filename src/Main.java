@@ -7,7 +7,8 @@ public class Main {
         //runner.BinarySearch();
         //runner.SelectionSort();
         //runner.BubbleSort();
-        runner.Stacks();
+        //runner.Stacks();
+        //runner.Queue();
     }
 
 

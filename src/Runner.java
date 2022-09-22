@@ -2,6 +2,7 @@ import DataStructures.Algorithms.Searching.ArraysBinarySearch;
 import DataStructures.Algorithms.Sorting.ArraysBubbleSort;
 import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
 import DataStructures.Arrays;
+import DataStructures.Queue;
 import DataStructures.Stack;
 
 public class Runner {
@@ -99,5 +100,32 @@ public class Runner {
             stack.Pop();
         }
         stack.PrintStack();
+    }
+
+    public void Queue()
+    {
+        Queue queue = new Queue(10);
+        queue.CreateQueue();
+        queue.InitializeRear();
+        queue.InitializeFront();
+
+        for(int i = 0; i < 10; i++)
+        {
+            queue.InsertElement(i+1);
+        }
+
+        queue.PrintQueue();
+
+        for(int i = 0; i < 6; i++)
+        {
+            queue.RemoveElement();
+
+            if(i == 5)
+            {
+                queue.InsertElement(66);
+            }
+        }
+
+        queue.PrintQueue();
     }
 }
