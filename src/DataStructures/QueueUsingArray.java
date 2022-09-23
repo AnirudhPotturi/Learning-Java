@@ -2,13 +2,14 @@ package DataStructures;
 
 import java.util.Arrays;
 
-public class Queue {
-    int Queue[];
+public class QueueUsingArray {
+    int Queue[] = null;
     int QueueSize;
     int Rear;
     int Front;
 
-    public Queue(int QueueSize)
+
+    public QueueUsingArray(int QueueSize)
     {
         this.QueueSize = QueueSize;
     }
@@ -32,14 +33,32 @@ public class Queue {
 
     public void InsertElement(int Element)
     {
-        UpdateRear();
-        Queue[Rear] = Element;
+        if((Front == 0 && Rear == QueueSize - 1) || (Front !=0 && Rear == Front - 1))
+        {
+            System.out.println("Queue is full");
+        }
+        else
+        {
+            UpdateRear();
+            Queue[Rear] = Element;
+        }
     }
 
     public void RemoveElement()
     {
-        Queue[Front] = 0;
-        UpdateFront();
+        if((Front == Rear & Front == -1))
+        {
+            System.out.println("Queue is empty");
+        }
+        else if ((Front == Rear  & Rear >= 0 & Queue[Front] != 0))
+        {
+            Queue[Front] = 0;
+            System.out.println("Queue is now empty");
+        }
+        else {
+            Queue[Front] = 0;
+            UpdateFront();
+        }
     }
 
     public void IncrementRear()
@@ -102,5 +121,4 @@ public class Queue {
             IncrementFront();
         }
     }
-
 }

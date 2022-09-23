@@ -2,8 +2,8 @@ import DataStructures.Algorithms.Searching.ArraysBinarySearch;
 import DataStructures.Algorithms.Sorting.ArraysBubbleSort;
 import DataStructures.Algorithms.Sorting.ArraysSelectionSort;
 import DataStructures.Arrays;
-import DataStructures.Queue;
-import DataStructures.Stack;
+import DataStructures.QueueUsingArray;
+import DataStructures.StackUsingArray;
 
 public class Runner {
     public static void ArrayRunner()
@@ -87,7 +87,7 @@ public class Runner {
 
     public void Stacks()
     {
-        Stack stack = new Stack(10);
+        StackUsingArray stack = new StackUsingArray(10);
         stack.CreateStack();
         stack.InitializeTop();
         for(int i =0; i < 11; i++)
@@ -104,26 +104,21 @@ public class Runner {
 
     public void Queue()
     {
-        Queue queue = new Queue(10);
+        QueueUsingArray queue = new QueueUsingArray(10);
         queue.CreateQueue();
         queue.InitializeRear();
         queue.InitializeFront();
 
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 11; i++)
         {
             queue.InsertElement(i+1);
         }
 
         queue.PrintQueue();
 
-        for(int i = 0; i < 6; i++)
+        for(int i = 0; i < 11; i++)
         {
             queue.RemoveElement();
-
-            if(i == 5)
-            {
-                queue.InsertElement(66);
-            }
         }
 
         queue.PrintQueue();

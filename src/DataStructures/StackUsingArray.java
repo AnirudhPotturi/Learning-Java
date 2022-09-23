@@ -2,14 +2,14 @@ package DataStructures;
 
 import java.util.Arrays;
 
-public class Stack {
+public class StackUsingArray {
     int Stack[];
     int StackSize;
     int Top;
 
 
 
-    public Stack(int StackSize)
+    public StackUsingArray(int StackSize)
     {
         this.StackSize = StackSize;
     }
