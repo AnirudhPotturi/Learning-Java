@@ -8,6 +8,8 @@ public class QueueUsingArray {
     int Rear;
     int Front;
 
+    int StartIdx, EndIdx;
+
 
     public QueueUsingArray(int QueueSize)
     {
@@ -120,5 +122,30 @@ public class QueueUsingArray {
         {
             IncrementFront();
         }
+    }
+
+    public void DisplayQueueInOrder()
+    {
+        if(Front < Rear)
+        {
+            StartIdx = Front;
+            EndIdx = Rear;
+        }
+        else
+        {
+            StartIdx = Rear;
+            EndIdx = Front;
+        }
+        System.out.print('[');
+        while(StartIdx!=EndIdx)
+        {
+            System.out.print(Queue[StartIdx] + ", ");
+            StartIdx++;
+            if(StartIdx == QueueSize)
+            {
+                StartIdx = 0;
+            }
+        }
+        System.out.print(']');
     }
 }
